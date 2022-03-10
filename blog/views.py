@@ -5,11 +5,11 @@ import random
 
 
 def home_view(request):
-    number = random.randint(1, 3)
+    number = random.randint(1, 4)
     article = Article.objects.get(id=number)
     article_queryset = Article.objects.all()
-    print(article_queryset)
-    name = 'Tanya'
+    # print(article_queryset)
+    # name = 'Tanya'
     context = {
         'object_list': article_queryset,
         'object': article,
@@ -19,6 +19,6 @@ def home_view(request):
     }
     HTML_STRING = render_to_string('home.html', context=context)
 
-    H1_Article = f'<h1>{article.title} (id: {article.id})</h1>'
+    # H1_Article = f'<h1>{article.title} (id: {article.id})</h1>'
 
     return HttpResponse(HTML_STRING)
