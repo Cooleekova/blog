@@ -16,3 +16,4 @@ tzdata==2021.5
 virtualenv==20.13.3
 virtualenv-clone==0.5.7
 whitenoise==6.0.0
+python-dotenv==0.19.2

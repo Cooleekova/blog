@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    {% block content %}
+    {% if object %}
+        <h1>{{ object.id }} -{{ object.title }}</h1>
+        <p>{{ object.text }}</p>
+    {% endif %}
+    {% endblock content %}
 </body>
 </html>

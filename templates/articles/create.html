@@ -1,10 +1,33 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    {% block content %}
+
+    {% if not created %}
+    <div style="margin-top:30px;">
+        <form action="." method="POST">
+             {% csrf_token %}
+             <div style="margin-top:30px;">
+                 <input type="text" name="title" placeholder="type your title here"/>
+             </div>
+             <div style="margin-top:10px;">
+                 <textarea name="text" placeholder="type your text here"></textarea>
+             </div>
+            <div style="margin-top:10px;">
+                <button type="submit" >CREATE ARTICLE</button>
+            </div>
+         </form>
+     </div>
+    {% else %}
+    <p>The article was created</p>
+    <a href="/articles/{{object.id}}/">{{ object.title }} - {{ object.text }}</a>
+
+    {% endif %}
+    {% endblock content %}
 </body>
 </html>
