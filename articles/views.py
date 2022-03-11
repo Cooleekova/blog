@@ -15,8 +15,7 @@ def article_detail_view(request, id=None):
 
 
 def article_search_view(request):
-    print(request.GET)
-    query_dict = request.GET # this is a dictionary
+    query_dict = request.GET  # this is a dictionary
     try:
         query = int(query_dict.get('q'))
     except:
