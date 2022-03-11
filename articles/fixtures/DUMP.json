@@ -1,1 +1,5 @@
-[{"model": "articles.article", "pk": 1, "fields": {"title": "This is my first Article", "text": "Hello World"}}, {"model": "articles.article", "pk": 2, "fields": {"title": "This is my second Article", "text": "Hello Again"}}, {"model": "articles.article", "pk": 3, "fields": {"title": "This is my third Article", "text": "Hello Again"}}, {"model": "articles.article", "pk": 4, "fields": {"title": "Yaay! I am fourth!", "text": "hello from me, i am fourth article"}}, {"model": "articles.article", "pk": 5, "fields": {"title": "тема", "text": "текст"}}, {"model": "articles.article", "pk": 6, "fields": {"title": "Заголовок пятого поста", "text": "я - пятый пост, я русский"}}, {"model": "articles.article", "pk": 7, "fields": {"title": "My awesome title", "text": "My aaawesome context"}}]
+[{"model": "articles.article", "pk": 1, "fields": {"title": "This is my first Article", "text": "Hello World"}},
+  {"model": "articles.article", "pk": 2, "fields": {"title": "This is my second Article", "text": "Hello Again"}},
+  {"model": "articles.article", "pk": 3, "fields": {"title": "This is my third Article", "text": "Hello Again"}},
+  {"model": "articles.article", "pk": 4, "fields": {"title": "Yaay! I am fourth!", "text": "hello from me, i am fourth article"}},
+  {"model": "articles.article", "pk": 7, "fields": {"title": "My awesome title", "text": "My aaawesome context"}}]
