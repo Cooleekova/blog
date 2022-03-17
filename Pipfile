@@ -23,6 +23,7 @@ virtualenv-clone = "==0.5.7"
 whitenoise = "==6.0.0"
 Django = "==4.0.3"
 python-dotenv = "*"
+django-dotenv = "*"
 
 [dev-packages]
 

@@ -9,6 +9,18 @@
     {% block content %}
 
     {% if not created %}
+
+    <div style="margin-top:30px;">
+        <form action="." method="POST">
+             {% csrf_token %}
+             {{ form.as_p }}
+             <div style="margin-top:10px;">
+                <button type="submit" >CREATE ARTICLE</button>
+            </div>
+         </form>
+     </div>
+
+
     <div style="margin-top:30px;">
         <form action="." method="POST">
              {% csrf_token %}
