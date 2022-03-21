@@ -10,7 +10,6 @@ def main():
     """Run administrative tasks."""
 
     # dotenv.read_dotenv()
-
     # dot_env_path = pathlib.Path() / '.env'
     # if dot_env_path.exists():
     #     dotenv.read_dotenv(str(dot_env_path))

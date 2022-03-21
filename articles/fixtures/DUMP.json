@@ -3,3 +3,6 @@
   {"model": "articles.article", "pk": 3, "fields": {"title": "This is my third Article", "text": "Hello Again"}},
   {"model": "articles.article", "pk": 4, "fields": {"title": "Yaay! I am fourth!", "text": "hello from me, i am fourth article"}},
   {"model": "articles.article", "pk": 7, "fields": {"title": "My awesome title", "text": "My aaawesome context"}}]
+
+
+

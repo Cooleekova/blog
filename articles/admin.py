@@ -7,6 +7,6 @@ from articles.models import Article
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'text', 'date_created')
+    list_display = ('id', 'title', 'text', 'slug', 'date_created')
     search_fields = ('title', 'text')
 

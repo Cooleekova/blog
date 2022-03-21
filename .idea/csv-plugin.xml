@@ -17,6 +17,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\articles\fixtures\DUMP.json">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\articles\models.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\articles\tests.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\articles\views.py">
           <value>
             <Attribute>
