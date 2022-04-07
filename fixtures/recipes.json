@@ -1,0 +1,211 @@
+[
+{
+    "model": "recipes.recipe",
+    "pk": 1,
+    "fields": {
+        "user": 3,
+        "name": "Pasta",
+        "description": "pasta and sauce",
+        "directions": "mix it together",
+        "timestamp": "2022-03-28T19:06:51.157Z",
+        "updated": "2022-04-01T16:42:43.240Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 2,
+    "fields": {
+        "user": 3,
+        "name": "Bolo de banana",
+        "description": "bake a cake with bananas",
+        "directions": "put in the oven",
+        "timestamp": "2022-03-31T17:31:40.043Z",
+        "updated": "2022-04-05T23:34:45.831Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "name": "Vitamina (shake)",
+        "description": "milk and fruits",
+        "directions": "shake well,\r\n\r\nbata ao ponto",
+        "timestamp": "2022-04-01T17:10:17.371Z",
+        "updated": "2022-04-04T21:56:04.010Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 4,
+    "fields": {
+        "user": 3,
+        "name": "Cake",
+        "description": "bolo de banana",
+        "directions": "",
+        "timestamp": "2022-04-05T23:35:05.634Z",
+        "updated": "2022-04-05T23:39:20.183Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipe",
+    "pk": 5,
+    "fields": {
+        "user": 3,
+        "name": "Batata doce !",
+        "description": "",
+        "directions": "",
+        "timestamp": "2022-04-05T23:36:24.072Z",
+        "updated": "2022-04-06T14:25:30.051Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 1,
+    "fields": {
+        "recipe": 1,
+        "name": "Macarrao",
+        "description": "",
+        "quantity": "250",
+        "quantity_as_float": 250,
+        "unit": "gram",
+        "directions": "",
+        "timestamp": "2022-03-28T19:20:58.287Z",
+        "updated": "2022-04-01T16:42:43.242Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 2,
+    "fields": {
+        "recipe": 1,
+        "name": "Sauce",
+        "description": "",
+        "quantity": "100",
+        "quantity_as_float": 100,
+        "unit": "gram",
+        "directions": "",
+        "timestamp": "2022-03-29T14:29:55.354Z",
+        "updated": "2022-03-31T19:28:12.471Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 3,
+    "fields": {
+        "recipe": 2,
+        "name": "flour",
+        "description": "any kind you like",
+        "quantity": "1/2",
+        "quantity_as_float": 0.5,
+        "unit": "kg",
+        "directions": "",
+        "timestamp": "2022-03-31T17:31:40.045Z",
+        "updated": "2022-04-05T23:34:46.140Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 4,
+    "fields": {
+        "recipe": 2,
+        "name": "sugar",
+        "description": "",
+        "quantity": "200",
+        "quantity_as_float": 200,
+        "unit": "gram",
+        "directions": "",
+        "timestamp": "2022-03-31T17:36:16.447Z",
+        "updated": "2022-04-05T23:34:46.381Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 5,
+    "fields": {
+        "recipe": 1,
+        "name": "tomato",
+        "description": "",
+        "quantity": "1 1/2",
+        "quantity_as_float": 1.5,
+        "unit": "kg",
+        "directions": "",
+        "timestamp": "2022-03-31T17:57:28.564Z",
+        "updated": "2022-03-31T19:24:23.192Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 6,
+    "fields": {
+        "recipe": 1,
+        "name": "tomato",
+        "description": "",
+        "quantity": "3",
+        "quantity_as_float": 3,
+        "unit": "kg",
+        "directions": "",
+        "timestamp": "2022-03-31T17:58:40.170Z",
+        "updated": "2022-03-31T19:27:54.271Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 7,
+    "fields": {
+        "recipe": 5,
+        "name": "batata",
+        "description": null,
+        "quantity": "2",
+        "quantity_as_float": 2,
+        "unit": "kg",
+        "directions": null,
+        "timestamp": "2022-04-06T14:08:52.862Z",
+        "updated": "2022-04-06T14:25:30.611Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 8,
+    "fields": {
+        "recipe": 5,
+        "name": "azeite",
+        "description": null,
+        "quantity": "10",
+        "quantity_as_float": 10,
+        "unit": "gram",
+        "directions": null,
+        "timestamp": "2022-04-06T14:25:31.001Z",
+        "updated": "2022-04-06T14:25:31.001Z",
+        "active": true
+    }
+},
+{
+    "model": "recipes.recipeingredient",
+    "pk": 9,
+    "fields": {
+        "recipe": 5,
+        "name": "",
+        "description": null,
+        "quantity": "",
+        "quantity_as_float": 0,
+        "unit": "",
+        "directions": null,
+        "timestamp": "2022-04-06T14:25:31.307Z",
+        "updated": "2022-04-06T14:25:31.307Z",
+        "active": true
+    }
+}
+]
