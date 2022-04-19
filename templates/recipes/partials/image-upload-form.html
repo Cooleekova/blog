@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block content %}
+
+   <form action="." method="POST" enctype="multipart/form-data"
+   hx-post="{{ request.path }}"
+   hx-encoding="multipart/form-data"
+   >
+       {% csrf_token %}
+       {{ form.as_p }}
+       <div style="margin-top:10px;">
+           <button type="submit" >Upload image</button>
+       </div>
+   </form>
+
+
+    {% endblock content %}
+</body>
+</html>

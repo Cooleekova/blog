@@ -21,23 +21,23 @@
      </div>
 
 
-    <div style="margin-top:30px;">
-        <form action="." method="POST">
-             {% csrf_token %}
-             <div style="margin-top:30px;">
-                 <input type="text" name="title" placeholder="type your title here"/>
-             </div>
-             <div style="margin-top:10px;">
-                 <textarea name="text" placeholder="type your text here"></textarea>
-             </div>
-            <div style="margin-top:10px;">
-                <button type="submit" >CREATE ARTICLE</button>
-            </div>
-         </form>
-     </div>
+<!--    <div style="margin-top:30px;">-->
+<!--        <form action="." method="POST">-->
+<!--             {% csrf_token %}-->
+<!--             <div style="margin-top:30px;">-->
+<!--                 <input type="text" name="title" placeholder="type your title here"/>-->
+<!--             </div>-->
+<!--             <div style="margin-top:10px;">-->
+<!--                 <textarea name="text" placeholder="type your text here"></textarea>-->
+<!--             </div>-->
+<!--            <div style="margin-top:10px;">-->
+<!--                <button type="submit" >CREATE ARTICLE</button>-->
+<!--            </div>-->
+<!--         </form>-->
+<!--     </div>-->
     {% else %}
-    <p>The article was created</p>
-    <a href="/articles/{{object.id}}/">{{ object.title }} - {{ object.text }}</a>
+    <p style="color:green">The article was created</p>
+    <a href="{{ object.get_absolute_url }}">{{ object.title }} - {{ object.text }}</a>
 
     {% endif %}
     {% endblock content %}

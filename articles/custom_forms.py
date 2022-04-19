@@ -11,7 +11,7 @@ class ArticleForm(forms.ModelForm):
     def clean(self):
         cleaned_data = self.cleaned_data
         title = cleaned_data.get('title')
-        qs = Article.objects.filter(title__icontains=title)
+        qs = Article.objects.filter(title__iexact=title)
         if qs.exists():
             self.add_error('title', f'Title "{title}" us already in use')
         return cleaned_data

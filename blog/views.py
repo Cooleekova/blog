@@ -8,8 +8,7 @@ def home_view(request):
     number = random.randint(1, 4)
     article = Article.objects.get(id=number)
     article_queryset = Article.objects.all()
-    # print(article_queryset)
-    # name = 'Tanya'
+
     context = {
         'object_list': article_queryset,
         'object': article,

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 
@@ -16,11 +16,12 @@ def article_create_view(request):
     if form.is_valid():
         article_object = form.save()
         context['form'] = ArticleForm()
+        context['object'] = article_object
+        context['created'] = True
 
-        # context = {
-        #     "object": article_object,
-        #     "created": True
-        # }
+        """ the commented out line below can help to redirect user right after creating article """
+        # return redirect(article_object.get_absolute_url())
+
     return render(request, 'articles/create.html', context=context)
 
 
@@ -42,16 +43,10 @@ def article_detail_view(request, slug=None):
 
 
 def article_search_view(request):
-    query_dict = request.GET  # this is a dictionary
-    try:
-        query = int(query_dict.get('q'))
-    except:
-        query = None
-    article_object = None
-    if query is not None:
-        article_object = Article.objects.get(id=query)
+    query = request.GET.get('q')  # this is a dictionary
+    qs = Article.objects.search(query=query)
     context = {
-        'object': article_object,
+        'object_list': qs,
     }
     return render(request, 'articles/search.html', context=context)
 

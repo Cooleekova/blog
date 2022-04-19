@@ -9,6 +9,11 @@
     {% block content %}
     <h1>{{ object.id }} -{{ object.title }}</h1>
     <p>{{ object.text }}</p>
+    {% if object.user is not None %}
+    <p>Author: {{ object.user }}  {% if request.user == object.user %} >>> This is you! {% endif %}</p>
+    {% else %}
+    <p>Author unidentified</p>
+    {% endif %}
     {% endblock content %}
 </body>
 </html>

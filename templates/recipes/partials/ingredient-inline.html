@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+
+<div id="ingredient-{{ object.id }}">
+    {{ object.quantity }} {{ object.unit }} - {{ object.name }}
+    <button hx-trigger="click" hx-get="{{ object.get_hx_update_url }}" hx-target="#ingredient-{{ object.id }}">Edit</button>
+
+
+    <a hx-post="{{ object.get_delete_url }}" hx-confirm="Delete ingredient '{{ object.name|title }}'?"
+       hx-trigger="click" href='{{ object.get_delete_url }}'
+       hx-target="#ingredient-{{ object.id }}" hx-swap="outerHTML"
+    >Delete</a>
+</div>

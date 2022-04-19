@@ -9,7 +9,7 @@ from .models import Article, slugify_instance_title
 class ArticleTestCase(TestCase):
 
     def setUp(self):
-        self.number_of_articles = 5
+        self.number_of_articles = 10
         for i in range(0, self.number_of_articles):
             Article.objects.create(title='Hello World', text='again')
 
@@ -47,3 +47,11 @@ class ArticleTestCase(TestCase):
         obj.slug = added_slug
         slugify_instance_title(obj, save=True)
         self.assertNotEqual(added_slug, obj.slug)
+
+    def test_article_search_manager(self):
+        qs = Article.objects.search(query='Hello World')
+        self.assertEqual(qs.count(), self.number_of_articles)
+        qs = Article.objects.search(query='again')
+        self.assertEqual(qs.count(), self.number_of_articles)
+        qs = Article.objects.search(query='World')
+        self.assertEqual(qs.count(), self.number_of_articles)
